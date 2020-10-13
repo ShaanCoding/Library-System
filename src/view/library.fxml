@@ -13,10 +13,19 @@
 <VBox xmlns:fx="http://javafx.com/fxml"
       fx:controller="controller.LibraryController"
       alignment="center" spacing="10" 
-      styleClass="root"
->
+      styleClass="root">
 
-    <Label text="&lt;insert assignment here&gt;"/>
+    <ImageView>
+        <Image url="@UTS.png"/>
+    </ImageView>
+
+    <Text text="Library System"/>
+
+    <Button text="Explore Catalogue" onAction="#exploreCatalogue"/>
+    <Button text="Patron Record" onAction="#patronRecord"/>
+    <Button text="Favourite Books" onAction="#favouriteBooks"/>
+    <Button text="Administration Mode" onAction="#administrationMode"/>
+    <Button text="Exit" onAction="#exit"/>
 
     <stylesheets>
         <URL value="@style.css"/>
