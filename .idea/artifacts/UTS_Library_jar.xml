@@ -3,6 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/UTS_Library_jar</output-path>
     <root id="archive" name="UTS Library.jar">
       <element id="module-output" name="UTS Library" />
+      <element id="module-source" name="UTS Library" />
     </root>
   </artifact>
 </component>
