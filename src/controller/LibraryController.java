@@ -15,8 +15,17 @@ public class LibraryController extends Controller<Library> {
 
     }
 
-    @FXML private void exploreCatalogue(ActionEvent event) {
+    public final Library getLibrary() {
+        return model;
+    }
 
+    @FXML private void exploreCatalogue(ActionEvent event) {
+        try {
+            ViewLoader.showStage(getLibrary(), "/view/catalogue.fxml", "Catalogue", stage);
+        }
+        catch(Exception ex) {
+
+        }
     }
 
     @FXML private void patronRecord(ActionEvent event) {
@@ -39,9 +48,5 @@ public class LibraryController extends Controller<Library> {
     @FXML private void exit(ActionEvent event) {
         //Exits the application
         stage.close();
-    }
-
-    public final Library getLibrary() {
-        return model;
     }
 }
