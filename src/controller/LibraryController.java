@@ -37,7 +37,12 @@ public class LibraryController extends Controller<Library> {
     }
 
     @FXML private void favouriteBooks(ActionEvent event) {
+        try {
+            ViewLoader.showStage(getLibrary(), "/view/favourites.fxml", "Favourites", new Stage());
+        }
+        catch(Exception ex) {
 
+        }
     }
 
     @FXML private void administrationMode(ActionEvent event) {
