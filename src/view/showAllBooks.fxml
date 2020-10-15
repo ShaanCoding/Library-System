@@ -9,8 +9,35 @@
 <?import javafx.scene.control.cell.*?>
 
 
-<VBox xmlns:fx="http://javafx.com/fxml">
-    
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ShowAllBooksController"
+      alignment="center" spacing="10"
+      styleClass="root">
+
+    <TableView fx:id="booksTv" items="${controller.allBooks}">
+        <columns>
+            <TableColumn text="Title">
+                <cellValueFactory>
+                    <PropertyValueFactory property="title"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Author">
+                <cellValueFactory>
+                    <PropertyValueFactory property="author"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Genre">
+                <cellValueFactory>
+                    <PropertyValueFactory property="genre"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <Button text="Close" onAction="#close"/>
+
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>

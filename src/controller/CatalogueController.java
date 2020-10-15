@@ -29,7 +29,7 @@ public class CatalogueController extends Controller<Library>
 
     @FXML private void availableBooks(ActionEvent actionEvent) {
         try {
-            ViewLoader.showStage(getLibrary(), "/view/showAvailableBooks.fxml", "Available Books", new Stage();
+            ViewLoader.showStage(getLibrary(), "/view/showAvailableBooks.fxml", "Available Books", new Stage());
         }
         catch(Exception ex) {
 
@@ -38,7 +38,7 @@ public class CatalogueController extends Controller<Library>
 
     @FXML private void booksByGenre(ActionEvent actionEvent) {
         try {
-            ViewLoader.showStage(getLibrary(), "/view/showBooksByGenre.fxml", "Browse by Genre", new Stage();
+            ViewLoader.showStage(getLibrary(), "/view/showBooksByGenre.fxml", "Browse by Genre", new Stage());
         }
         catch(Exception ex) {
 
@@ -47,7 +47,7 @@ public class CatalogueController extends Controller<Library>
 
     @FXML private void booksByAuthor(ActionEvent actionEvent) {
         try {
-            ViewLoader.showStage(getLibrary(), "/view/showBooksByAuthor.fxml", "Browse by Author", new Stage();
+            ViewLoader.showStage(getLibrary(), "/view/showBooksByAuthor.fxml", "Browse by Author", new Stage());
         }
         catch(Exception ex) {
 
@@ -56,7 +56,7 @@ public class CatalogueController extends Controller<Library>
 
     @FXML private void borrowBooks(ActionEvent actionEvent) {
         try {
-            ViewLoader.showStage(getLibrary(), "/view/borrow.fxml", "Borrow a Book", new Stage();
+            ViewLoader.showStage(getLibrary(), "/view/borrow.fxml", "Borrow a Book", new Stage());
         }
         catch(Exception ex) {
 
@@ -65,7 +65,7 @@ public class CatalogueController extends Controller<Library>
 
     @FXML private void returnBooks(ActionEvent actionEvent) {
         try {
-            ViewLoader.showStage(getLibrary(), "/view/return.fxml", "Return a Book", new Stage();
+            ViewLoader.showStage(getLibrary(), "/view/return.fxml", "Return a Book", new Stage());
         }
         catch(Exception ex) {
 
@@ -74,7 +74,7 @@ public class CatalogueController extends Controller<Library>
 
     @FXML private void placeHold(ActionEvent actionEvent) {
         try {
-            ViewLoader.showStage(getLibrary(), "/view/placeHold.fxml", "Place a Hold", stage);
+            ViewLoader.showStage(getLibrary(), "/view/placeHold.fxml", "Place a Hold", new Stage());
         }
         catch(Exception ex) {
 
