@@ -37,6 +37,9 @@ public class AddBookController  extends Controller<Library>
     @FXML private void addBook(ActionEvent actionEvent) {
         //Adds book to library
         getLibrary().getCatalogue().addBook(getTitle(), getAuthor(), getGenre());
+        titleTf.setText("");
+        authorTf.setText("");
+        genreTf.setText("");
         //System.out.println(getLibrary().getCatalogue().getAllBooks().get(0).toString());
     }
 
