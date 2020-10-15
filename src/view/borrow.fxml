@@ -9,7 +9,22 @@
 <?import javafx.scene.layout.*?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="controller.BorrowController">
+      fx:controller="controller.BorrowController"
+      alignment="center" spacing="10"
+      styleClass="root">
+
+    <HBox>
+        <Label text="Patron ID:"/>
+        <TextField fx:id="patronTf"/>
+        <Button text="Select Patron" onAction="#selectPatron"/>
+    </HBox>
+
+    <Label text="Available Books:"/>
+
+    <ListView fx:id="availableBooksLv"/>
+
+    <Button text="Borrow Selected Book" onAction="#borrowSelectedBook"/>
+    <Button text="Close" onAction="#close"/>
 
     <stylesheets>
         <URL value="@style.css"/>
