@@ -28,7 +28,12 @@ public class LibraryController extends Controller<Library> {
     }
 
     @FXML private void patronRecord(ActionEvent event) {
+        try {
+            ViewLoader.showStage(getLibrary(), "/view/record.fxml", "Patron Record", new Stage());
+        }
+        catch(Exception ex) {
 
+        }
     }
 
     @FXML private void favouriteBooks(ActionEvent event) {
