@@ -37,9 +37,8 @@ public class ShowBooksByGenreController extends Controller<Library>
         if(getSelectedGenre() != null) {
             Genre genre = getSelectedGenre();
             ObservableList<Book> booksInGenre = getLibrary().getCatalogue().getBooksInGenre(genre);
-            System.out.println(booksInGenre.get(0));
+            //System.out.println(booksInGenre.get(0));
             booksInGenreLv.setItems(booksInGenre);
-            //booksInGenreLv.setItems(getBooksInGenre);
         }
     }
 
