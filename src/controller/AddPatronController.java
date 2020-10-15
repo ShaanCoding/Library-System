@@ -21,6 +21,10 @@ public class AddPatronController extends Controller<Library>
 
     @FXML private void addPatron(ActionEvent actionEvent) {
         //Adds patron to the list
+
+        /*
+            Todo: Add text "Patron added." if new patron is added else "Patron already exists!" if patron exists
+         */
         getLibrary().addPatron(getPatronID(), getPatronName());
         patronIDTf.setText("");
         patronNameTf.setText("");

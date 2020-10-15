@@ -81,11 +81,6 @@ public class CatalogueController extends Controller<Library>
     }
 
     @FXML private void exitCatalogue(ActionEvent actionEvent) {
-        try {
-            ViewLoader.showStage(getLibrary(), "/view/library.fxml", "Main menu", stage);
-        }
-        catch(Exception ex) {
-
-        }
+        stage.close();
     }
 }

@@ -52,12 +52,7 @@ public class AdminController extends Controller<Library>
     }
 
     @FXML private void exitAdministration(ActionEvent actionEvent) {
-        try{
-            ViewLoader.showStage(getLibrary(), "/view/library.fxml", "Main menu", stage);
-        }
-        catch(Exception ex) {
-
-        }
+        stage.close();
     }
 
     public final Library getLibrary() {

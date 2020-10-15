@@ -4,9 +4,8 @@ import au.edu.uts.ap.javafx.Controller;
 import au.edu.uts.ap.javafx.ViewLoader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.stage.Stage;
 import model.Library;
-
-import javax.swing.*;
 
 public class LibraryController extends Controller<Library> {
 
@@ -21,7 +20,7 @@ public class LibraryController extends Controller<Library> {
 
     @FXML private void exploreCatalogue(ActionEvent event) {
         try {
-            ViewLoader.showStage(getLibrary(), "/view/catalogue.fxml", "Catalogue", stage);
+            ViewLoader.showStage(getLibrary(), "/view/catalogue.fxml", "Catalogue", new Stage());
         }
         catch(Exception ex) {
 
@@ -38,7 +37,7 @@ public class LibraryController extends Controller<Library> {
 
     @FXML private void administrationMode(ActionEvent event) {
         try {
-            ViewLoader.showStage(getLibrary(), "/view/admin.fxml", "Administration Menu", stage);
+            ViewLoader.showStage(getLibrary(), "/view/admin.fxml", "Administration Menu", new Stage());
         }
         catch(Exception ex) {
 

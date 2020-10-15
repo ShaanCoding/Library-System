@@ -7,8 +7,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml">
-    
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.RemovePatronController"
+      alignment="center" spacing="10"
+      styleClass="root">
+
+    <ListView fx:id="patronsLv" items="${controller.patrons}"/>
+
+    <Button text="Remove Patron" onAction="#removePatron"/>
+    <Button text="Close" onAction="#close"/>
+
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>
