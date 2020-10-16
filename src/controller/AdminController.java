@@ -15,40 +15,20 @@ public class AdminController extends Controller<Library>
     }
 
     @FXML
-    private void addPatron(ActionEvent actionEvent) {
-        try {
-            ViewLoader.showStage(getLibrary(), "/view/addPatron.fxml", "Add Patron", new Stage());
-        }
-        catch(Exception ex) {
-
-        }
+    private void addPatron(ActionEvent actionEvent) throws Exception {
+        ViewLoader.showStage(getLibrary(), "/view/addPatron.fxml", "Add Patron", new Stage());
     }
 
-    @FXML private void removePatron(ActionEvent actionEvent) {
-        try {
-            ViewLoader.showStage(getLibrary(), "/view/removePatron.fxml", "Remove Patron", new Stage());
-        }
-        catch(Exception ex) {
-
-        }
+    @FXML private void removePatron(ActionEvent actionEvent) throws Exception {
+        ViewLoader.showStage(getLibrary(), "/view/removePatron.fxml", "Remove Patron", new Stage());
     }
 
-    @FXML private void addBook(ActionEvent actionEvent) {
-        try {
-            ViewLoader.showStage(getLibrary(), "/view/addBook.fxml", "Add Book", new Stage());
-        }
-        catch(Exception ex) {
-
-        }
+    @FXML private void addBook(ActionEvent actionEvent) throws Exception {
+        ViewLoader.showStage(getLibrary(), "/view/addBook.fxml", "Add Book", new Stage());
     }
 
-    @FXML private void removeBook(ActionEvent actionEvent) {
-        try {
-            ViewLoader.showStage(getLibrary(), "/view/removeBook.fxml", "Remove Book", new Stage());
-        }
-        catch(Exception ex) {
-
-        }
+    @FXML private void removeBook(ActionEvent actionEvent) throws Exception {
+        ViewLoader.showStage(getLibrary(), "/view/removeBook.fxml", "Remove Book", new Stage());
     }
 
     @FXML private void exitAdministration(ActionEvent actionEvent) {

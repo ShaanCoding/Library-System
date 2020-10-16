@@ -8,16 +8,26 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.image.*?>
 
+<?import javafx.scene.text.Text?>
 <VBox xmlns:fx="http://javafx.com/fxml"
       fx:controller="controller.AdminController"
       alignment="center" spacing="10"
       styleClass="root">
 
-    <Button text="Add Patron" onAction="#addPatron"/>
-    <Button text="Remove Patron" onAction="#removePatron"/>
-    <Button text="Add Book" onAction="#addBook"/>
-    <Button text="Remove Book" onAction="#removeBook"/>
-    <Button text="Exit Administration" onAction="#exitAdministration"/>
+    <HBox styleClass="header" spacing="20" alignment="CENTER">
+        <ImageView>
+            <Image url="@UTS.png"/>
+        </ImageView>
+        <Text styleClass="heading" text="Library System"/>
+    </HBox>
+
+    <VBox styleClass="footer" spacing="20" alignment="CENTER">
+        <Button text="Add Patron" onAction="#addPatron"/>
+        <Button text="Remove Patron" onAction="#removePatron"/>
+        <Button text="Add Book" onAction="#addBook"/>
+        <Button text="Remove Book" onAction="#removeBook"/>
+        <Button text="Exit Administration" onAction="#exitAdministration"/>
+    </VBox>
 
     <stylesheets>
         <URL value="@style.css"/>
