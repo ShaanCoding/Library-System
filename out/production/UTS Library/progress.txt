@@ -16,7 +16,7 @@
 [?] The Show By Genre and By Author windows are done.
 [y] The Borrow window is at least partially done.
 [?] The Borrow window is done.
-[?] The Return window is at least partially done.
+[y] The Return window is at least partially done.
 [?] The Return window is done.
 [y] The Place Hold window is at least partially done.
 [?] The Place Hold window is done.
