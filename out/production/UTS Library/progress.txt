@@ -18,5 +18,5 @@
 [?] The Borrow window is done.
 [?] The Return window is at least partially done.
 [?] The Return window is done.
-[?] The Place Hold window is at least partially done.
+[y] The Place Hold window is at least partially done.
 [?] The Place Hold window is done.

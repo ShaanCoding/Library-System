@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import model.Library;
 
+import java.io.IOException;
+
 public class CatalogueController extends Controller<Library>
 {
     @FXML
@@ -72,13 +74,9 @@ public class CatalogueController extends Controller<Library>
         }
     }
 
-    @FXML private void placeHold(ActionEvent actionEvent) {
-        try {
+    @FXML private void placeHold(ActionEvent actionEvent) throws IOException
+    {
             ViewLoader.showStage(getLibrary(), "/view/placeHold.fxml", "Place a Hold", new Stage());
-        }
-        catch(Exception ex) {
-
-        }
     }
 
     @FXML private void exitCatalogue(ActionEvent actionEvent) {
