@@ -13,6 +13,7 @@ import model.Patron;
 public class ReturnController extends Controller<Library>
 {
     @FXML private TextField patronIDTf;
+    @FXML private Button returnPatronIDBtn;
     @FXML private ListView<Book> borrowedBooksLv;
     @FXML private Button returnSelectedBookBtn;
 
@@ -27,6 +28,11 @@ public class ReturnController extends Controller<Library>
 
     @FXML
     public void initialize() {
+        patronIDTf.textProperty().addListener(
+                (observable, oldTextField, newTextField) ->
+                            returnPatronIDBtn.setDisable(patronIDTf.getText().isEmpty())
+        );
+
         borrowedBooksLv.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldBook, newBook) ->
                         returnSelectedBookBtn.setDisable(newBook == null)

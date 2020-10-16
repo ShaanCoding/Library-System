@@ -16,7 +16,7 @@
     <HBox>
         <Label text="Patron ID:"/>
         <TextField fx:id="patronIDTf"/>
-        <Button text="Select Patron" onAction="#selectPatron"/>
+        <Button text="Select Patron" fx:id="selectPatronIDBtn" onAction="#selectPatron" disable="true"/>
     </HBox>
 
     <Label text="Books:"/>

@@ -15,6 +15,7 @@ import model.Patron;
 public class PlaceHoldController extends Controller<Library>
 {
     @FXML private TextField patronIDTf;
+    @FXML private Button selectPatronIDBtn;
     @FXML private Button holdBookBtn;
     @FXML private ListView<Book> availableBooksLv;
     @FXML private Text holdResponseText;
@@ -30,6 +31,11 @@ public class PlaceHoldController extends Controller<Library>
 
     @FXML
     public void initialize() {
+        patronIDTf.textProperty().addListener(
+                (observable, oldTextField, newTextField) ->
+                        selectPatronIDBtn.setDisable(patronIDTf.getText().isEmpty())
+        );
+
         availableBooksLv.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldBook, newBook) ->
                         holdBookBtn.setDisable(newBook == null)
