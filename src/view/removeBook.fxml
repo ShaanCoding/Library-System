@@ -17,7 +17,6 @@
     <Button text="Remove Book" onAction="#removeBook"/>
     <Button text="Close" onAction="#close"/>
 
-
     <stylesheets>
         <URL value="@style.css"/>
     </stylesheets>

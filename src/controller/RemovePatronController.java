@@ -10,7 +10,7 @@ import model.Patron;
 
 public class RemovePatronController extends Controller<Library>
 {
-    @FXML ListView patronsLv;
+    @FXML private ListView patronsLv;
 
     public ObservableList<Patron> getPatrons() {
         return getLibrary().getPatrons();

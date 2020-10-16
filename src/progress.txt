@@ -7,7 +7,7 @@
 [y] The Add Patron and Book windows are at least partially done.
 [y] The Add Patron and Book windows are done.
 [y] The Remove Patron and Book windows are at least partially done.
-[?] The Remove Patron and Book windows are done.
+[y] The Remove Patron and Book windows are done.
 [y] The Patron Record and Patron Favourites windows are at least partially done.
 [?] The Patron Record and Patron Favourites windows are done.
 [y] The Show All Books and Show Available Books windows are at least partially done.

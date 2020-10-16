@@ -10,8 +10,7 @@ import model.Library;
 
 public class RemoveBookController extends Controller<Library>
 {
-    @FXML
-    ListView booksLv;
+    @FXML private ListView booksLv;
 
     public ObservableList<Book> getBooks() {
         return getLibrary().getCatalogue().getAllBooks();
@@ -36,6 +35,5 @@ public class RemoveBookController extends Controller<Library>
         }
     }
 
-    @FXML private void close(ActionEvent actionEvent) {
-        stage.close();
-    }}
+    @FXML private void close(ActionEvent actionEvent) { stage.close(); }
+}
