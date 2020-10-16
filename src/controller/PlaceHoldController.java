@@ -52,6 +52,14 @@ public class PlaceHoldController extends Controller<Library>
         //We need to remove book from observable list and then redefine source for listview
         //Also update text
 
+        //
+        if(!patronIDTf.getText().isEmpty()) {
+            Patron patron = getPatron();
+            Book borrowedBook = getSelectedBook();
+            patron.borrowBook(borrowedBook);
+            //availableBooksLv.setItems(getLibrary().getCatalogue().getBorrowableBooks(patron)); DON'T THINK WE NEED TO UPDATE
+            holdResponseText.setText("Hold placed on " + borrowedBook.getTitle() + " for " + patron.getName());
+        }
 
     }
 
