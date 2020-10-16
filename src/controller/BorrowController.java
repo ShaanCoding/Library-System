@@ -4,6 +4,7 @@ import au.edu.uts.ap.javafx.Controller;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import model.Author;
@@ -14,6 +15,7 @@ import model.Patron;
 public class BorrowController extends Controller<Library>
 {
     @FXML private TextField patronTf;
+    @FXML private Button patronIDBtn;
     @FXML private ListView availableBooksLv;
 
     /*
@@ -30,7 +32,10 @@ public class BorrowController extends Controller<Library>
 
     @FXML
     public void initialize() {
-
+        patronTf.textProperty().addListener(
+                (observer, oldText, newText) ->
+                        patronIDBtn.setDisable(patronTf.getText().isEmpty())
+        );
     }
 
     public final Library getLibrary() {
