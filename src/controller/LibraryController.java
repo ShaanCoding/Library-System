@@ -18,40 +18,20 @@ public class LibraryController extends Controller<Library> {
         return model;
     }
 
-    @FXML private void exploreCatalogue(ActionEvent event) {
-        try {
-            ViewLoader.showStage(getLibrary(), "/view/catalogue.fxml", "Catalogue", new Stage());
-        }
-        catch(Exception ex) {
-
-        }
+    @FXML private void exploreCatalogue(ActionEvent event) throws Exception {
+        ViewLoader.showStage(getLibrary(), "/view/catalogue.fxml", "Catalogue", new Stage());
     }
 
-    @FXML private void patronRecord(ActionEvent event) {
-        try {
-            ViewLoader.showStage(getLibrary(), "/view/record.fxml", "Patron Record", new Stage());
-        }
-        catch(Exception ex) {
-
-        }
+    @FXML private void patronRecord(ActionEvent event) throws Exception {
+        ViewLoader.showStage(getLibrary(), "/view/record.fxml", "Patron Record", new Stage());
     }
 
-    @FXML private void favouriteBooks(ActionEvent event) {
-        try {
-            ViewLoader.showStage(getLibrary(), "/view/favourites.fxml", "Favourites", new Stage());
-        }
-        catch(Exception ex) {
-
-        }
+    @FXML private void favouriteBooks(ActionEvent event) throws Exception {
+        ViewLoader.showStage(getLibrary(), "/view/favourites.fxml", "Favourites", new Stage());
     }
 
-    @FXML private void administrationMode(ActionEvent event) {
-        try {
-            ViewLoader.showStage(getLibrary(), "/view/admin.fxml", "Administration Menu", new Stage());
-        }
-        catch(Exception ex) {
-
-        }
+    @FXML private void administrationMode(ActionEvent event) throws Exception {
+        ViewLoader.showStage(getLibrary(), "/view/admin.fxml", "Administration Menu", new Stage());
     }
 
     @FXML private void exit(ActionEvent event) {

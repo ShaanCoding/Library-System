@@ -15,17 +15,20 @@
       alignment="center" spacing="10" 
       styleClass="root">
 
-    <ImageView>
-        <Image url="@UTS.png"/>
-    </ImageView>
+    <HBox styleClass="header" spacing="20" alignment="CENTER">
+        <ImageView>
+            <Image url="@UTS.png"/>
+        </ImageView>
+        <Text styleClass="heading" text="Library System"/>
+    </HBox>
 
-    <Text text="Library System"/>
-
-    <Button text="Explore Catalogue" onAction="#exploreCatalogue"/>
-    <Button text="Patron Record" onAction="#patronRecord"/>
-    <Button text="Favourite Books" onAction="#favouriteBooks"/>
-    <Button text="Administration Mode" onAction="#administrationMode"/>
-    <Button text="Exit" onAction="#exit"/>
+    <VBox styleClass="footer" spacing="20" alignment="CENTER">
+        <Button text="Explore Catalogue" onAction="#exploreCatalogue"/>
+        <Button text="Patron Record" onAction="#patronRecord"/>
+        <Button text="Favourite Books" onAction="#favouriteBooks"/>
+        <Button text="Administration Mode" onAction="#administrationMode"/>
+        <Button text="Exit" onAction="#exit"/>
+    </VBox>
 
     <stylesheets>
         <URL value="@style.css"/>
