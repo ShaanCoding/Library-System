@@ -13,7 +13,7 @@ import model.Patron;
 public class FavouritesController extends Controller<Library>
 {
     @FXML private TextField patronIDTf;
-    @FXML private Text patronText;
+    @FXML private Text feedbackTxt;
     @FXML private ListView<Book> favouriteBooksLv;
 
     @FXML

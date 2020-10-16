@@ -13,13 +13,13 @@
       alignment="center" spacing="10"
       styleClass="root">
 
-    <HBox>
+    <HBox spacing="10">
         <Label text="Patron ID:"/>
         <TextField fx:id="patronIDTf"/>
         <Button text="Show Favourites" onAction="#showFavourites"/>
     </HBox>
 
-    <Text text="No Patron Selected" fx:id="patronText"/>
+    <Text styleClass="feedbackTxt" text="No Patron Selected" fx:id="feedbackTxt"/>
 
     <ListView fx:id="favouriteBooksLv"/>
 
