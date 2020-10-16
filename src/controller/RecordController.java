@@ -17,7 +17,7 @@ public class RecordController  extends Controller<Library>
     @FXML private Button showRecordBtn;
     @FXML private Text feedbackTxt;
     @FXML private ListView<Book> currentlyBorrowedLv;
-    @FXML private ListView<Book> borrwedHistoryLv;
+    @FXML private ListView<Book> borrowedHistoryLv;
 
     private int getPatronID() {
         return Integer.parseInt(patronIDTf.getText());
@@ -28,7 +28,7 @@ public class RecordController  extends Controller<Library>
     }
 
     private void setBorrwingHistoryBooks(Patron patron) {
-        borrwedHistoryLv.setItems(patron.borrowingHistory());
+        borrowedHistoryLv.setItems(patron.borrowingHistory());
     }
 
     @FXML private void showRecord(ActionEvent actionEvent) {

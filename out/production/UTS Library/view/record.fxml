@@ -25,7 +25,7 @@
     <ListView fx:id="currentlyBorrowedLv"/>
 
     <Label text="Borrowing History:"/>
-    <ListView fx:id="borrwedHistoryLv"/>
+    <ListView fx:id="borrowedHistoryLv"/>
 
     <Button text="Close" onAction="#close"/>
 

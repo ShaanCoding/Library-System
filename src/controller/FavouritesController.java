@@ -3,6 +3,7 @@ package controller;
 import au.edu.uts.ap.javafx.Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -13,13 +14,17 @@ import model.Patron;
 public class FavouritesController extends Controller<Library>
 {
     @FXML private TextField patronIDTf;
+    @FXML private Button showRecordBtn;
     @FXML private Text feedbackTxt;
     @FXML private ListView<Book> favouriteBooksLv;
 
     @FXML
     public void initialize()
     {
-
+        patronIDTf.textProperty().addListener(
+                (observable, oldText, newText) ->
+                        showRecordBtn.setDisable(patronIDTf.getText().isEmpty())
+        );
     }
 
     public final Library getLibrary() {

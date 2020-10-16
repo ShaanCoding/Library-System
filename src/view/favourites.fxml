@@ -16,7 +16,7 @@
     <HBox spacing="10">
         <Label text="Patron ID:"/>
         <TextField fx:id="patronIDTf"/>
-        <Button text="Show Favourites" onAction="#showFavourites"/>
+        <Button text="Show Favourites" fx:id="showRecordBtn" onAction="#showFavourites" disable="true"/>
     </HBox>
 
     <Text styleClass="feedbackTxt" text="No Patron Selected" fx:id="feedbackTxt"/>
