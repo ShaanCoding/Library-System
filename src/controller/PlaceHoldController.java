@@ -47,10 +47,6 @@ public class PlaceHoldController extends Controller<Library>
         );
     }
 
-    public final Library getLibrary() {
-        return model;
-    }
-
     @FXML private void selectPatron(ActionEvent actionEvent) {
             Patron patron = getPatron();
             if(patron == null) {
@@ -59,8 +55,7 @@ public class PlaceHoldController extends Controller<Library>
     }
 
     @FXML private void holdSelectedBook(ActionEvent actionEvent) {
-        //We need to remove book from observable list and then redefine source for listview
-        //Also update text
+        //We need to remove book from observable list and then redefine source for listview, also update text
 
         Patron patron = getPatron();
         if(patron != null) {
@@ -82,7 +77,9 @@ public class PlaceHoldController extends Controller<Library>
         }
     }
 
-    @FXML private void close(ActionEvent actionEvent) {
-        stage.close();
+    @FXML private void close(ActionEvent actionEvent) { stage.close(); }
+
+    public final Library getLibrary() {
+        return model;
     }
 }

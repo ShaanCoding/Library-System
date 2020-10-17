@@ -27,22 +27,21 @@ public class FavouritesController extends Controller<Library>
         );
     }
 
-    public final Library getLibrary() {
-        return model;
-    }
-
     private int getPatronID() {
         return Integer.parseInt(patronIDTf.getText());
     }
 
     @FXML private void showFavourites(ActionEvent actionEvent) {
-        if(!patronIDTf.getText().isEmpty()) {
-            Patron patron = getLibrary().getPatron(getPatronID());
-            favouriteBooksLv.setItems(patron.favourites());
-        }
+        Patron patron = getLibrary().getPatron(getPatronID());
+        favouriteBooksLv.setItems(patron.favourites());
+        feedbackTxt.setText(patron.getName() + "'s favourite books:");
     }
 
     @FXML private void close(ActionEvent actionEvent) {
         stage.close();
+    }
+
+    public final Library getLibrary() {
+        return model;
     }
 }

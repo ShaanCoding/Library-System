@@ -8,16 +8,6 @@ import javafx.stage.Stage;
 import model.Library;
 
 public class LibraryController extends Controller<Library> {
-
-    @FXML
-    public void initialize() {
-
-    }
-
-    public final Library getLibrary() {
-        return model;
-    }
-
     @FXML private void exploreCatalogue(ActionEvent event) throws Exception {
         ViewLoader.showStage(getLibrary(), "/view/catalogue.fxml", "Catalogue", new Stage());
     }
@@ -34,8 +24,9 @@ public class LibraryController extends Controller<Library> {
         ViewLoader.showStage(getLibrary(), "/view/admin.fxml", "Administration Menu", new Stage());
     }
 
-    @FXML private void exit(ActionEvent event) {
-        //Exits the application
-        stage.close();
+    @FXML private void exit(ActionEvent event) { stage.close(); }
+
+    public final Library getLibrary() {
+        return model;
     }
 }

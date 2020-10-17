@@ -10,11 +10,6 @@ import model.Library;
 public class AdminController extends Controller<Library>
 {
     @FXML
-    public void initialize() {
-
-    }
-
-    @FXML
     private void addPatron(ActionEvent actionEvent) throws Exception {
         ViewLoader.showStage(getLibrary(), "/view/addPatron.fxml", "Add Patron", new Stage());
     }
