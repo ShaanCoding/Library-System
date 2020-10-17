@@ -17,10 +17,7 @@ public class BorrowController extends Controller<Library>
     @FXML private TextField patronTf;
     @FXML private Button patronIDBtn;
     @FXML private ListView availableBooksLv;
-
-    /*
-    Todo: replace with observable and update when user presses button
-     */
+    @FXML private Button borrowSelectedBookBtn;
 
     private int getPatronID() {
         return Integer.parseInt(patronTf.getText());
@@ -35,6 +32,11 @@ public class BorrowController extends Controller<Library>
         patronTf.textProperty().addListener(
                 (observer, oldText, newText) ->
                         patronIDBtn.setDisable(patronTf.getText().isEmpty())
+        );
+
+        availableBooksLv.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldBook, newBook) ->
+                        borrowSelectedBookBtn.setDisable(newBook == null)
         );
     }
 
@@ -56,7 +58,8 @@ public class BorrowController extends Controller<Library>
             Book borrowedBook = getSelectedBook();
             Patron patron = getLibrary().getPatron(getPatronID());
 
-            patron.borrowBook(borrowedBook);
+            //Borrows the book
+            getLibrary().getCatalogue().loanBookToPatron(borrowedBook, patron);
         }
     }
 

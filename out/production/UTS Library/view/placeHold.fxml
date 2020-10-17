@@ -25,7 +25,7 @@
 
     <Button text="Hold Selected Book" fx:id="holdBookBtn" onAction="#holdSelectedBook" disable="true"/>
 
-    <Text text="" fx:id="holdResponseText"/>
+    <Text styleClass="feedbackTxt" text="" fx:id="feedbackTxt"/>
 
     <Button text="Close" onAction="#close"/>
 

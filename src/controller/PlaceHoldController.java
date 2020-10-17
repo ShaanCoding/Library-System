@@ -18,7 +18,7 @@ public class PlaceHoldController extends Controller<Library>
     @FXML private Button selectPatronIDBtn;
     @FXML private Button holdBookBtn;
     @FXML private ListView<Book> availableBooksLv;
-    @FXML private Text holdResponseText;
+    @FXML private Text feedbackTxt;
 
     private Patron getPatron() {
         int patronID = Integer.parseInt(patronIDTf.getText());
@@ -62,7 +62,7 @@ public class PlaceHoldController extends Controller<Library>
             Book borrowedBook = getSelectedBook();
             patron.borrowBook(borrowedBook);
             //availableBooksLv.setItems(getLibrary().getCatalogue().getBorrowableBooks(patron)); DON'T THINK WE NEED TO UPDATE
-            holdResponseText.setText("Hold placed on " + borrowedBook.getTitle() + " for " + patron.getName());
+            feedbackTxt.setText("Hold placed on " + borrowedBook.getTitle() + " for " + patron.getName());
         }
 
     }

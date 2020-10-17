@@ -23,7 +23,7 @@
 
     <ListView fx:id="availableBooksLv"/>
 
-    <Button text="Borrow Selected Book" onAction="#borrowSelectedBook"/>
+    <Button text="Borrow Selected Book" fx:id="borrowSelectedBookBtn" onAction="#borrowSelectedBook" disable="true"/>
     <Button text="Close" onAction="#close"/>
 
     <stylesheets>

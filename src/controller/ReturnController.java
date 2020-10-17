@@ -56,7 +56,8 @@ public class ReturnController extends Controller<Library>
         Patron patron = getPatron();
         Book returnedBook = getBook();
 
-        patron.returnBook(returnedBook);
+        //Returns book from patron back to catalogue, and changes patron history
+        getLibrary().getCatalogue().returnBookFromPatron(returnedBook, patron);
     }
 
     @FXML private void close(ActionEvent actionEvent) {
