@@ -33,8 +33,14 @@ public class FavouritesController extends Controller<Library>
 
     @FXML private void showFavourites(ActionEvent actionEvent) {
         Patron patron = getLibrary().getPatron(getPatronID());
-        favouriteBooksLv.setItems(patron.favourites());
-        feedbackTxt.setText(patron.getName() + "'s favourite books:");
+
+        if(patron != null) {
+            favouriteBooksLv.setItems(patron.favourites());
+            feedbackTxt.setText(patron.getName() + "'s favourite books:");
+        }
+        else {
+            feedbackTxt.setText("No Patron selected");
+        }
     }
 
     @FXML private void close(ActionEvent actionEvent) {

@@ -42,10 +42,16 @@ public class RecordController  extends Controller<Library>
     @FXML private void showRecord(ActionEvent actionEvent) {
         Patron patron = getLibrary().getPatron(getPatronID());
 
-        //Set patron text
-        feedbackTxt.setText(patron.toString());
-        setBorrowedBooks(patron);
-        setBorrwingHistoryBooks(patron);
+        //Checks if patron exists
+        if(patron != null) {
+            //Set patron text
+            feedbackTxt.setText(patron.toString());
+            setBorrowedBooks(patron);
+            setBorrwingHistoryBooks(patron);
+        }
+        else {
+            feedbackTxt.setText("No Patron selected");
+        }
     }
 
     @FXML private void close(ActionEvent actionEvent) {
