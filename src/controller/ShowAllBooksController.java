@@ -16,17 +16,12 @@ public class ShowAllBooksController extends Controller<Library>
         return getLibrary().getCatalogue().getAllBooks();
     }
 
-    @FXML
-    public void initialize() {
-
+    @FXML private void close(ActionEvent actionEvent)
+    {
+        stage.close();
     }
 
     public final Library getLibrary() {
         return model;
-    }
-
-    @FXML private void close(ActionEvent actionEvent)
-    {
-        stage.close();
     }
 }
