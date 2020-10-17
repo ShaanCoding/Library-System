@@ -18,17 +18,12 @@ public class ShowAvailableBooksController extends Controller<Library>
         return getLibrary().getCatalogue().getBooksOnShelf();
     }
 
-    @FXML
-    public void initialize() {
-
+    @FXML private void close(ActionEvent actionEvent)
+    {
+        stage.close();
     }
 
     public final Library getLibrary() {
         return model;
-    }
-
-    @FXML private void close(ActionEvent actionEvent)
-    {
-        stage.close();
     }
 }
