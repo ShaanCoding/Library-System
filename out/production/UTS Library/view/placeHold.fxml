@@ -21,7 +21,7 @@
 
     <Label text="Books:"/>
 
-    <ListView fx:id="availableBooksLv"/>
+    <ListView fx:id="availableBooksLv" items="${controller.availableBooks}"/>
 
     <Button text="Hold Selected Book" fx:id="holdBookBtn" onAction="#holdSelectedBook" disable="true"/>
 

@@ -30,8 +30,9 @@ public class RemoveBookController extends Controller<Library>
     }
 
     @FXML private void removeBook(ActionEvent actionEvent) {
+        //If a book is selected, we remove it from the catalogue
         if(getSelectedBooks() != null) {
-            getBooks().remove(getSelectedBooks());
+            getLibrary().getCatalogue().removeBook(getSelectedBooks());
         }
     }
 

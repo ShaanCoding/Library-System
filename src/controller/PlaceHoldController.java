@@ -1,6 +1,7 @@
 package controller;
 
 import au.edu.uts.ap.javafx.Controller;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -29,6 +30,10 @@ public class PlaceHoldController extends Controller<Library>
         return (Book) availableBooksLv.getSelectionModel().getSelectedItem();
     }
 
+    public ObservableList<Book> getAvailableBooks() {
+        return getLibrary().getCatalogue().getBooksOnShelf();
+    }
+
     @FXML
     public void initialize() {
         patronIDTf.textProperty().addListener(
@@ -49,7 +54,6 @@ public class PlaceHoldController extends Controller<Library>
     @FXML private void selectPatron(ActionEvent actionEvent) {
         if(!patronIDTf.getText().isEmpty()) {
             Patron patron = getPatron();
-            availableBooksLv.setItems(getLibrary().getCatalogue().getBorrowableBooks(patron));
         }
     }
 
@@ -57,10 +61,12 @@ public class PlaceHoldController extends Controller<Library>
         //We need to remove book from observable list and then redefine source for listview
         //Also update text
 
+        //Todo: May need to check if hold is correct. i.e it isn't already on hold
+
         if(!patronIDTf.getText().isEmpty()) {
             Patron patron = getPatron();
             Book borrowedBook = getSelectedBook();
-            patron.borrowBook(borrowedBook);
+            borrowedBook.addHold(patron);
             //availableBooksLv.setItems(getLibrary().getCatalogue().getBorrowableBooks(patron)); DON'T THINK WE NEED TO UPDATE
             feedbackTxt.setText("Hold placed on " + borrowedBook.getTitle() + " for " + patron.getName());
         }
