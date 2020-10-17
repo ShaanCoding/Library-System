@@ -50,7 +50,7 @@ public class RecordController  extends Controller<Library>
             setBorrwingHistoryBooks(patron);
         }
         else {
-            feedbackTxt.setText("No Patron selected");
+            feedbackTxt.setText("No Patron Selected");
         }
     }
 
