@@ -46,22 +46,17 @@ public class BorrowController extends Controller<Library>
     }
 
     @FXML private void selectPatron(ActionEvent actionEvent) {
-        //Checks if empty before casting
-        if(!patronTf.getText().isEmpty()) {
-            Patron patron = getLibrary().getPatron(getPatronID());
-            UpdateAvailableBooksListView(patron);
-        }
+        Patron patron = getLibrary().getPatron(getPatronID());
+        UpdateAvailableBooksListView(patron);
     }
 
     @FXML private void borrowSelectedBook(ActionEvent actionEvent) {
-        if(getSelectedBook() != null) {
             Book borrowedBook = getSelectedBook();
             Patron patron = getLibrary().getPatron(getPatronID());
 
             //Borrows the book
             getLibrary().getCatalogue().loanBookToPatron(borrowedBook, patron);
             UpdateAvailableBooksListView(patron);
-        }
     }
 
     @FXML private void close(ActionEvent actionEvent) {

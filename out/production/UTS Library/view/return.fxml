@@ -13,7 +13,7 @@
       alignment="center" spacing="10"
       styleClass="root">
 
-    <HBox>
+    <HBox spacing="10">
         <Label text="Patron ID:"/>
         <TextField fx:id="patronIDTf"/>
         <Button text="Select Patron" fx:id="returnPatronIDBtn" onAction="#selectPatron" disable="true"/>

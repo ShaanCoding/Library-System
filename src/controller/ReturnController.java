@@ -44,11 +44,8 @@ public class ReturnController extends Controller<Library>
     }
 
     @FXML private void selectPatron(ActionEvent actionEvent) {
-        //Checks if empty
-        if(!patronIDTf.getText().isEmpty()) {
-            Patron patron = getPatron();
-            borrowedBooksLv.setItems(patron.currentlyBorrowed());
-        }
+        Patron patron = getPatron();
+        borrowedBooksLv.setItems(patron.currentlyBorrowed());
     }
 
     @FXML private void returnSelectedBook(ActionEvent actionEvent) {
