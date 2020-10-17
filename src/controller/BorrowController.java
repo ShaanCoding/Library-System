@@ -44,12 +44,16 @@ public class BorrowController extends Controller<Library>
         return model;
     }
 
+    private void UpdateAvailableBooksListView(Patron patron) {
+        ObservableList<Book> bookObservableList = getLibrary().getCatalogue().getBorrowableBooks(patron);
+        availableBooksLv.setItems(bookObservableList);
+    }
+
     @FXML private void selectPatron(ActionEvent actionEvent) {
         //Checks if empty before casting
         if(!patronTf.getText().isEmpty()) {
             Patron patron = getLibrary().getPatron(getPatronID());
-            ObservableList<Book> bookObservableList = getLibrary().getCatalogue().getBorrowableBooks(patron);
-            availableBooksLv.setItems(bookObservableList);
+            UpdateAvailableBooksListView(patron);
         }
     }
 
@@ -60,6 +64,7 @@ public class BorrowController extends Controller<Library>
 
             //Borrows the book
             getLibrary().getCatalogue().loanBookToPatron(borrowedBook, patron);
+            UpdateAvailableBooksListView(patron);
         }
     }
 
