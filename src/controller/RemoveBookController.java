@@ -20,20 +20,13 @@ public class RemoveBookController extends Controller<Library>
         return (Book) booksLv.getSelectionModel().getSelectedItem();
     }
 
-    @FXML
-    public void initialize() {
-
-    }
-
     public final Library getLibrary() {
         return model;
     }
 
     @FXML private void removeBook(ActionEvent actionEvent) {
         //If a book is selected, we remove it from the catalogue
-        if(getSelectedBooks() != null) {
-            getLibrary().getCatalogue().removeBook(getSelectedBooks());
-        }
+        getLibrary().getCatalogue().removeBook(getSelectedBooks());
     }
 
     @FXML private void close(ActionEvent actionEvent) { stage.close(); }
