@@ -27,10 +27,6 @@ public class AddBookController  extends Controller<Library>
         return genreTf.getText();
     }
 
-    public final Library getLibrary() {
-        return model;
-    }
-
     @FXML private void addBook(ActionEvent actionEvent) {
         //Adds book to library - contains error handling if book with same data exists
 
@@ -45,5 +41,9 @@ public class AddBookController  extends Controller<Library>
 
     @FXML private void close(ActionEvent actionEvent) {
         stage.close();
+    }
+
+    public final Library getLibrary() {
+        return model;
     }
 }

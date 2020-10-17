@@ -36,11 +36,6 @@ public class AddPatronController extends Controller<Library>
         stage.close();
     }
 
-    @FXML
-    public void initialize() {
-
-    }
-
     public final Library getLibrary() {
         return model;
     }
