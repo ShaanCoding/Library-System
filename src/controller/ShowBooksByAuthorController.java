@@ -24,15 +24,6 @@ public class ShowBooksByAuthorController extends Controller<Library>
         return (Author) authorsLv.getSelectionModel().getSelectedItem();
     }
 
-    @FXML
-    public void initialize() {
-
-    }
-
-    public final Library getLibrary() {
-        return model;
-    }
-
     @FXML private void displayAuthors(ActionEvent actionEvent) {
         if(getSelectedAuthor() != null) {
             Author author = getSelectedAuthor();
@@ -43,5 +34,9 @@ public class ShowBooksByAuthorController extends Controller<Library>
 
     @FXML private void close(ActionEvent actionEvent) {
         stage.close();
+    }
+
+    public final Library getLibrary() {
+        return model;
     }
 }

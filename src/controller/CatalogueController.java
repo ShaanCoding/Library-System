@@ -9,15 +9,6 @@ import model.Library;
 
 public class CatalogueController extends Controller<Library>
 {
-    @FXML
-    public void initialize() {
-
-    }
-
-    @FXML private final Library getLibrary() {
-        return model;
-    }
-
     @FXML private void allBooks(ActionEvent actionEvent) throws Exception {
         ViewLoader.showStage(getLibrary(), "/view/showAllBooks.fxml", "Complete Catalogue", new Stage());
     }
@@ -48,5 +39,9 @@ public class CatalogueController extends Controller<Library>
 
     @FXML private void exitCatalogue(ActionEvent actionEvent) {
         stage.close();
+    }
+
+    private final Library getLibrary() {
+        return model;
     }
 }

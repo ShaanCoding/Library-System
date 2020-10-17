@@ -20,23 +20,15 @@ public class RemovePatronController extends Controller<Library>
         return (Patron) patronsLv.getSelectionModel().getSelectedItem();
     }
 
-    @FXML
-    public void initialize() {
-
-    }
-
-    public final Library getLibrary() {
-        return model;
-    }
-
     @FXML private void removePatron(ActionEvent actionEvent) {
-        if(getSelectedPatron() != null) {
-            getPatrons().remove((getSelectedPatron()));
-            //System.out.println(getSelectedPatron().getName());
-        }
+        getPatrons().remove((getSelectedPatron()));
     }
 
     @FXML private void close(ActionEvent actionEvent) {
         stage.close();
+    }
+
+    public final Library getLibrary() {
+        return model;
     }
 }

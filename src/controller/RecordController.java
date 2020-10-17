@@ -19,6 +19,14 @@ public class RecordController  extends Controller<Library>
     @FXML private ListView<Book> currentlyBorrowedLv;
     @FXML private ListView<Book> borrowedHistoryLv;
 
+    @FXML
+    public void initialize() {
+        patronIDTf.textProperty().addListener(
+                (observable, oldText, newText) ->
+                        showRecordBtn.setDisable(patronIDTf.getText().isEmpty())
+        );
+    }
+
     private int getPatronID() {
         return Integer.parseInt(patronIDTf.getText());
     }
@@ -32,29 +40,19 @@ public class RecordController  extends Controller<Library>
     }
 
     @FXML private void showRecord(ActionEvent actionEvent) {
-        if(!patronIDTf.getText().isEmpty()) {
-            Patron patron = getLibrary().getPatron(getPatronID());
+        Patron patron = getLibrary().getPatron(getPatronID());
 
-            //Set patron text
-            feedbackTxt.setText(patron.toString());
-            setBorrowedBooks(patron);
-            setBorrwingHistoryBooks(patron);
-        }
-    }
-
-    @FXML
-    public void initialize() {
-        patronIDTf.textProperty().addListener(
-                (observable, oldText, newText) ->
-                showRecordBtn.setDisable(patronIDTf.getText().isEmpty())
-        );
-    }
-
-    public final Library getLibrary() {
-        return model;
+        //Set patron text
+        feedbackTxt.setText(patron.toString());
+        setBorrowedBooks(patron);
+        setBorrwingHistoryBooks(patron);
     }
 
     @FXML private void close(ActionEvent actionEvent) {
         stage.close();
+    }
+
+    public final Library getLibrary() {
+        return model;
     }
 }
