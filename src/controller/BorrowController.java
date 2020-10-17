@@ -40,10 +40,6 @@ public class BorrowController extends Controller<Library>
         );
     }
 
-    public final Library getLibrary() {
-        return model;
-    }
-
     private void UpdateAvailableBooksListView(Patron patron) {
         ObservableList<Book> bookObservableList = getLibrary().getCatalogue().getBorrowableBooks(patron);
         availableBooksLv.setItems(bookObservableList);
@@ -71,4 +67,6 @@ public class BorrowController extends Controller<Library>
     @FXML private void close(ActionEvent actionEvent) {
         stage.close();
     }
+
+    public final Library getLibrary() { return model; }
 }
