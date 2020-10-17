@@ -25,9 +25,11 @@ public class ShowBooksByAuthorController extends Controller<Library>
     }
 
     @FXML private void displayAuthors(ActionEvent actionEvent) {
-        Author author = getSelectedAuthor();
-        ObservableList<Book> booksInAuthor = getLibrary().getCatalogue().getBooksByAuthor(author);
-        booksInAuthorLv.setItems(booksInAuthor);
+        if(getSelectedAuthor() != null) {
+            Author author = getSelectedAuthor();
+            ObservableList<Book> booksInAuthor = getLibrary().getCatalogue().getBooksByAuthor(author);
+            booksInAuthorLv.setItems(booksInAuthor);
+        }
     }
 
     @FXML private void close(ActionEvent actionEvent) {

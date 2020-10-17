@@ -25,9 +25,11 @@ public class ShowBooksByGenreController extends Controller<Library>
     }
 
     @FXML private void displayGenres(ActionEvent actionEvent) {
-        Genre genre = getSelectedGenre();
-        ObservableList<Book> booksInGenre = getLibrary().getCatalogue().getBooksInGenre(genre);
-        booksInGenreLv.setItems(booksInGenre);
+        if(getSelectedGenre() != null) {
+            Genre genre = getSelectedGenre();
+            ObservableList<Book> booksInGenre = getLibrary().getCatalogue().getBooksInGenre(genre);
+            booksInGenreLv.setItems(booksInGenre);
+        }
     }
 
     @FXML private void close(ActionEvent actionEvent) {
