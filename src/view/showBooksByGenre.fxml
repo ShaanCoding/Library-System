@@ -13,12 +13,12 @@
       styleClass="root">
 
     <Label text="Genres:"/>
-    <ListView fx:id="genresLv" items="${controller.allGenres}"/>
+    <ListView fx:id="genresLv" items="${controller.allGenres}" prefWidth="250" prefHeight="50"/>
 
     <Button text="Display" onAction="#displayGenres"/>
 
     <Label text="Books in Selected Genre:"/>
-    <ListView fx:id="booksInGenreLv"/>
+    <ListView fx:id="booksInGenreLv" prefWidth="250" prefHeight="100"/>
 
     <Button text="Close" onAction="#close"/>
 

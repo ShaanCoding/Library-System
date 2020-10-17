@@ -21,7 +21,7 @@
 
     <Text styleClass="feedbackTxt" text="No Patron Selected" fx:id="feedbackTxt"/>
 
-    <ListView fx:id="favouriteBooksLv"/>
+    <ListView fx:id="favouriteBooksLv" prefWidth="200" prefHeight="100"/>
 
     <Button text="Close" onAction="#close"/>
 

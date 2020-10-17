@@ -21,7 +21,7 @@
 
     <Label text="Available Books:"/>
 
-    <ListView fx:id="availableBooksLv"/>
+    <ListView fx:id="availableBooksLv" prefWidth="200" prefHeight="100"/>
 
     <Button text="Borrow Selected Book" fx:id="borrowSelectedBookBtn" onAction="#borrowSelectedBook" disable="true"/>
     <Button text="Close" onAction="#close"/>

@@ -22,10 +22,10 @@
     <Text styleClass="feedbackTxt" text="No Patron Selected" fx:id="feedbackTxt"/>
 
     <Label text="Currently Borrowed Books:"/>
-    <ListView fx:id="currentlyBorrowedLv"/>
+    <ListView fx:id="currentlyBorrowedLv" prefWidth="200" prefHeight="100"/>
 
     <Label text="Borrowing History:"/>
-    <ListView fx:id="borrowedHistoryLv"/>
+    <ListView fx:id="borrowedHistoryLv" prefWidth="200" prefHeight="100"/>
 
     <Button text="Close" onAction="#close"/>
 
