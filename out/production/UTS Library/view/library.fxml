@@ -19,7 +19,7 @@
         <ImageView>
             <Image url="@UTS.png"/>
         </ImageView>
-        <Text styleClass="heading" text="Library System"/>
+        <Label styleClass="h1" text="Library System"/>
     </HBox>
 
     <VBox styleClass="footer" spacing="20" alignment="CENTER">
