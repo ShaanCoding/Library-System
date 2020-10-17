@@ -15,6 +15,9 @@
       styleClass="root">
 
     <TableView fx:id="booksTv" items="${controller.allBooks}">
+
+        <placeholder> <Label text="No Books in Catalogue"/> </placeholder>
+
         <columns>
             <TableColumn text="Title">
                 <cellValueFactory>
