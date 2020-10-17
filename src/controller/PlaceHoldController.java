@@ -62,8 +62,6 @@ public class PlaceHoldController extends Controller<Library>
         //We need to remove book from observable list and then redefine source for listview
         //Also update text
 
-        //Todo: May need to check if hold is correct. i.e it isn't already on hold
-
         Patron patron = getPatron();
         if(patron != null) {
             Book borrowedBook = getSelectedBook();
@@ -78,14 +76,10 @@ public class PlaceHoldController extends Controller<Library>
                 Patron bookHolder = borrowedBook.patronWithFirstHold();
                 feedbackTxt.setText(bookHolder.getName() + " has already placed a hold on " + borrowedBook.getTitle());
             }
-
-
         }
         else {
             feedbackTxt.setText("No Patron selected");
         }
-
-
     }
 
     @FXML private void close(ActionEvent actionEvent) {
