@@ -5,9 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-import model.Author;
-import model.Book;
-import model.Genre;
 import model.Library;
 
 
@@ -30,11 +27,6 @@ public class AddBookController  extends Controller<Library>
         return genreTf.getText();
     }
 
-    @FXML
-    public void initialize() {
-
-    }
-
     public final Library getLibrary() {
         return model;
     }
@@ -49,8 +41,6 @@ public class AddBookController  extends Controller<Library>
         else {
             feedbackTxt.setText("That book is already in the Catalogue.");
         }
-
-        //System.out.println(getLibrary().getCatalogue().getAllBooks().get(0).toString());
     }
 
     @FXML private void close(ActionEvent actionEvent) {
