@@ -2,6 +2,7 @@ package controller;
 
 import au.edu.uts.ap.javafx.Controller;
 import au.edu.uts.ap.javafx.ViewLoader;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
@@ -24,7 +25,7 @@ public class LibraryController extends Controller<Library> {
         ViewLoader.showStage(getLibrary(), "/view/admin.fxml", "Administration Menu", new Stage());
     }
 
-    @FXML private void exit(ActionEvent event) { stage.close(); }
+    @FXML private void exit(ActionEvent event) { Platform.exit(); }
 
     public final Library getLibrary() {
         return model;
