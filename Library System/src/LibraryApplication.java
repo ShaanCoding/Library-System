@@ -13,7 +13,7 @@ public class LibraryApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        ViewLoader.showStage(new Library(), "/view/library.fxml", "Main menu", stage);
+        ViewLoader.showStage(new Library(), "/view/library.fxml", "Main Menu", stage);
     }
 
 }
