@@ -15,9 +15,6 @@
       alignment="center" styleClass="root">
 
     <HBox styleClass="header" spacing="20" alignment="CENTER">
-        <ImageView>
-            <Image url="@UTS.png"/>
-        </ImageView>
         <Label styleClass="h1" text="Library System"/>
     </HBox>
 
