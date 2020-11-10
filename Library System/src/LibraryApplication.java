@@ -14,5 +14,4 @@ public class LibraryApplication extends Application {
 
         ViewLoader.showStage(new Library(), "/view/library.fxml", "Main Menu", stage);
     }
-
 }
