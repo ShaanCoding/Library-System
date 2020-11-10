@@ -1,6 +1,6 @@
 package controller;
 
-import au.edu.uts.ap.javafx.Controller;
+import dev.shaankhan.javafx.Controller;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

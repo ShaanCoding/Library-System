@@ -1,5 +1,4 @@
-
-import au.edu.uts.ap.javafx.*;
+import dev.shaankhan.javafx.ViewLoader;
 import javafx.stage.*;
 import javafx.application.Application;
 import model.Library;

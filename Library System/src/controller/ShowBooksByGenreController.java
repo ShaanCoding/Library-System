@@ -1,7 +1,6 @@
 package controller;
 
-import au.edu.uts.ap.javafx.Controller;
-import javafx.collections.FXCollections;
+import dev.shaankhan.javafx.Controller;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,7 +8,6 @@ import javafx.scene.control.ListView;
 import model.Book;
 import model.Genre;
 import model.Library;
-import model.Patron;
 
 public class ShowBooksByGenreController extends Controller<Library>
 {

@@ -1,13 +1,12 @@
 package controller;
 
-import au.edu.uts.ap.javafx.Controller;
+import dev.shaankhan.javafx.Controller;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import model.Author;
 import model.Book;
-import model.Genre;
 import model.Library;
 
 public class ShowBooksByAuthorController extends Controller<Library>

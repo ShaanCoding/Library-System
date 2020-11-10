@@ -67,7 +67,6 @@ Label {
     -fx-alignment: center;
 }
 
-
 *:focused {
     -fx-focus-color: #11a141;
 }

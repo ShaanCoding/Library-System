@@ -1,12 +1,9 @@
-package au.edu.uts.ap.javafx;
+package dev.shaankhan.javafx;
 
-import javafx.application.*;
 import javafx.fxml.*;
 import javafx.stage.*;
 import javafx.scene.*;
 import java.io.*;
-import java.lang.reflect.*;
-import javafx.beans.property.*;
 
 public class ViewLoader {
     public static <T> void showStage(T model, String fxml, String title, Stage stage) throws IOException {

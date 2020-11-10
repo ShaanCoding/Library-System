@@ -1,4 +1,4 @@
-package au.edu.uts.ap.javafx;
+package dev.shaankhan.javafx;
 
 import javafx.stage.*;
 

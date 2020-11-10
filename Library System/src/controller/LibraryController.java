@@ -1,7 +1,7 @@
 package controller;
 
-import au.edu.uts.ap.javafx.Controller;
-import au.edu.uts.ap.javafx.ViewLoader;
+import dev.shaankhan.javafx.Controller;
+import dev.shaankhan.javafx.ViewLoader;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
